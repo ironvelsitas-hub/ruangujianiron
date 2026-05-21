@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Ujian Online - Ikuti Ujian & Quiz</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">📝</div>
+                <div class="logo-text">Ruang<span>Ujian</span></div>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html" class="active">Beranda</a>
+                <a href="/dashboard.html">Dashboard Guru</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">✨ Platform Ujian Modern</div>
+            <h1 class="hero-title">
+                Ikuti Ujian, Quiz & Tugas<br>
+                <span class="gradient-text">Online Dengan Mudah</span>
+            </h1>
+            <p class="hero-desc">
+                Platform ujian online terpercaya dengan fitur lengkap untuk siswa dan guru.
+                Ikuti ujian kapan saja, dimana saja.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToTugas()">
+                    Mulai Ujian 🚀
+                </button>
+                <button class="btn-secondary" onclick="window.location.href='/dashboard.html'">
+                    Untuk Guru 👨‍🏫
+                </button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalTugas">0</div>
+                <div class="stat-label">Tersedia</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalSiswa">0</div>
+                <div class="stat-label">Siswa Aktif</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daftar Tugas Section -->
+    <section class="tugas-section" id="tugasSection">
+        <div class="container">
+            <div class="section-header">
+                <h2>📋 Daftar Ujian & Tugas</h2>
+                <p>Pilih ujian yang ingin kamu ikuti</p>
+            </div>
+            <div class="tugas-grid" id="tugasGrid">
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Form Data Diri -->
+    <div class="modal" id="formModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>📝 Form Data Diri</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" id="studentName" required placeholder="Masukkan nama lengkap">
+                </div>
+                <div class="form-group">
+                    <label>NIS / ID Siswa</label>
+                    <input type="text" id="studentId" required placeholder="Masukkan NIS">
+                </div>
+                <div class="form-group">
+                    <label>Kelas</label>
+                    <select id="studentClass" required>
+                        <option value="">Pilih Kelas</option>
+                        <option>X IPA 1</option>
+                        <option>X IPA 2</option>
+                        <option>XI IPA 1</option>
+                        <option>XI IPA 2</option>
+                        <option>XII IPA 1</option>
+                        <option>XII IPA 2</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Mulai Ujian →</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

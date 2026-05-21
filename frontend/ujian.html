@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian Online - Ruang Ujian</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="ujian-container">
+        <div class="ujian-header">
+            <div class="ujian-info">
+                <h2 id="judulUjian"></h2>
+                <p id="mapelUjian"></p>
+            </div>
+            <div class="timer-box">
+                <div class="timer-label">⏱️ Sisa Waktu</div>
+                <div class="timer" id="timer">00:00</div>
+            </div>
+        </div>
+
+        <div class="ujian-content">
+            <div class="soal-container" id="soalContainer"></div>
+            <div class="ujian-sidebar">
+                <div class="soal-nav" id="soalNav"></div>
+                <button class="btn-submit" id="submitBtn">Submit Jawaban ✅</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/ujian.js"></script>
+</body>
+</html>

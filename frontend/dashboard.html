@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Guru - Ruang Ujian</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">👨‍🏫</div>
+                <div class="logo-text">Dashboard<span>Guru</span></div>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html">Beranda</a>
+                <a href="/dashboard.html" class="active">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Dashboard Guru</h1>
+            <p>Kelola ujian, tugas, dan lihat hasil siswa</p>
+        </div>
+
+        <!-- Form Tambah Tugas -->
+        <div class="card form-card">
+            <h2>📤 Upload Tugas Baru</h2>
+            <form id="tugasForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Judul Tugas</label>
+                        <input type="text" id="judul" required placeholder="Contoh: Ujian Matematika Bab 1">
+                    </div>
+                    <div class="form-group">
+                        <label>Mata Pelajaran</label>
+                        <input type="text" id="mapel" required placeholder="Contoh: Matematika">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Deskripsi Tugas</label>
+                    <textarea id="deskripsi" rows="3" required placeholder="Jelaskan tentang tugas ini..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Waktu (Menit)</label>
+                        <input type="number" id="waktu" required placeholder="60">
+                    </div>
+                    <div class="form-group">
+                        <label>Jumlah Soal</label>
+                        <input type="number" id="jumlahSoal" required placeholder="10">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Soal-soal (pisahkan dengan baris baru)</label>
+                    <textarea id="soal" rows="6" required placeholder="1. Apa hasil dari 2+2?&#10;A. 3&#10;B. 4&#10;C. 5&#10;D. 6&#10;&#10;2. Siapa presiden pertama Indonesia?..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Upload Tugas →</button>
+            </form>
+        </div>
+
+        <!-- Daftar Tugas -->
+        <div class="card">
+            <h2>📋 Daftar Tugas</h2>
+            <div class="tugas-list" id="tugasList"></div>
+        </div>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
